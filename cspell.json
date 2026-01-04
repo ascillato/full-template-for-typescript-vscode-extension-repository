@@ -1,0 +1,34 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "useGitignore": true,
+  "ignorePaths": [
+    "node_modules",
+    "out",
+    "dist",
+    ".vscode",
+    ".github",
+    "coverage",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.svg"
+  ],
+  "words": [
+    "cloc",
+    "CLOC",
+    "compat",
+    "CSpell",
+    "href",
+    "lifecycles",
+    "linkify",
+    "sphinxcontrib",
+    "tdd",
+    "toctree",
+    "typedoc",
+    "vscode",
+    "workspace",
+    "webview",
+    "webviews",
+    "hotfixes"
+  ]
+}

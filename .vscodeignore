@@ -1,0 +1,27 @@
+# Exclude development sources and tests from the extension package
+src/**
+test/**
+tests/**
+.vscode/**
+**/*.map
+**/*.ts
+coverage/**
+.vscode-test/**
+**/tsconfig*.json
+AGENTS.md
+.gitignore
+.github/**
+VSCode-Logger.code-workspace
+Makefile
+.prettierignore
+eslint.config.mjs
+typedoc.json
+cspell.json
+docs/build/**
+docs/html/**
+docs/xml/**
+docs/requirements.txt
+docs/source/**
+docs/typedoc/**
+.VSCodeCounter/**
+temp_*.*

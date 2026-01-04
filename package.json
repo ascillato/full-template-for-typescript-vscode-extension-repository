@@ -1,0 +1,106 @@
+{
+  "name": "vscode-extension-template",
+  "displayName": "VS Code Extension Template",
+  "description": "Starter repository for building VS Code extensions with TypeScript.",
+  "icon": "media/icon.png",
+  "version": "0.1.0",
+  "publisher": "template",
+  "author": "Extension Template Maintainers",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/your-extension-template"
+  },
+  "extensionKind": [
+    "workspace"
+  ],
+  "bugs": {
+    "url": "https://github.com/your-org/your-extension-template/issues"
+  },
+  "homepage": "https://github.com/your-org/your-extension-template",
+  "license": "MIT",
+  "pricing": "Free",
+  "galleryBanner": {
+    "color": "#1E1E1E",
+    "theme": "dark"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "template",
+    "typescript",
+    "vscode",
+    "extension",
+    "starter"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:extension-template.sayHello",
+    "onCommand:extension-template.showWelcomePanel"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Extension Template",
+      "properties": {
+        "template.greetingPrefix": {
+          "type": "string",
+          "default": "Hello",
+          "markdownDescription": "Prefix used by the sample `Say Hello` command. Replace or extend this section with settings for your extension."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension-template.sayHello",
+        "title": "Say Hello",
+        "category": "Extension Template"
+      },
+      {
+        "command": "extension-template.showWelcomePanel",
+        "title": "Open Welcome Panel",
+        "category": "Extension Template"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:docs": "cspell --config ./cspell.json --no-progress \"*.md\" \"docs/**/*.{md,txt}\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "docs:typedoc": "typedoc --options typedoc.json",
+    "test": "npm run test:coverage && npm run coverage:report && npm run test:e2e",
+    "test:unit": "vitest run --config vitest.config.ts tests/unit",
+    "test:integration": "vitest run --config vitest.config.ts tests/integration",
+    "test:coverage": "vitest run --config vitest.config.ts --coverage",
+    "coverage:report": "python3 docs/source/coverage_report.py || python docs/source/coverage_report.py",
+    "test:e2e": "npm run compile && node ./tests/e2e/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.19.3",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
+    "@vitest/coverage-v8": "^4.0.16",
+    "@vscode/test-electron": "^2.4.1",
+    "cloc": "^2.6.0-cloc",
+    "cspell": "^9.4.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-spellcheck": "^0.0.20",
+    "mocha": "^11.7.5",
+    "prettier": "^3.7.4",
+    "typedoc": "^0.27.9",
+    "typescript": "^5.4.0",
+    "vitest": "^4.0.16"
+  },
+  "dependencies": {}
+}
