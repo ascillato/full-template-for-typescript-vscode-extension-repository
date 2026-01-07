@@ -86,8 +86,7 @@ jobs:
         with:
           name: test-artifacts
           path: |
-            coverage/coverage-summary.json
-            docs/source/_generated/coverage-report.md
+            docs/build/coverage/coverage-summary.json
 
   # 4. Package VSIX + Draft GitHub Release (tag pushes only)
   release:
@@ -165,7 +164,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: test-artifacts
-          path: .
+          path: docs/build/coverage
 
       - name: Set up Python
         uses: actions/setup-python@v5
