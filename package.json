@@ -7,7 +7,7 @@
   "publisher": "template",
   "author": "Extension Template Maintainers",
   "engines": {
-    "vscode": "^1.108.0"
+    "vscode": "^1.109.0"
   },
   "repository": {
     "type": "git",
@@ -87,7 +87,7 @@
     "@types/node": "^25.2.2",
     "@types/vscode": "^1.109.0",
     "@typescript-eslint/eslint-plugin": "^8.54.0",
-    "@typescript-eslint/parser": "^8.52.0",
+    "@typescript-eslint/parser": "^8.54.0",
     "@vitest/coverage-v8": "^4.0.18",
     "@vscode/test-electron": "^2.4.1",
     "cloc": "^2.6.0-cloc",
@@ -96,11 +96,10 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-spellcheck": "^0.0.20",
-    "mocha": "^11.7.5",
+    "mocha": "^11.3.0",
     "prettier": "^3.8.1",
     "typedoc": "^0.28.16",
     "typescript": "^5.9.3",
     "vitest": "^4.0.16"
-  },
-  "dependencies": {}
+  }
 }
