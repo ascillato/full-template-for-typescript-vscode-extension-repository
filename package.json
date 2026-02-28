@@ -83,6 +83,8 @@
     "test:e2e": "npm run compile && node ./tests/e2e/runTest.js"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.4",
+    "@eslint/js": "^10.0.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "^25.3.0",
     "@types/vscode": "^1.109.0",
@@ -92,14 +94,22 @@
     "@vscode/test-electron": "^2.4.1",
     "cloc": "^2.6.0-cloc",
     "cspell": "^9.6.4",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-spellcheck": "^0.0.20",
+    "globals": "^13.24.0",
     "mocha": "^11.7.5",
     "prettier": "^3.8.1",
     "typedoc": "^0.28.17",
     "typescript": "^5.9.3",
     "vitest": "^4.0.16"
+  },
+  "overrides": {
+    "diff": "8.0.3",
+    "serialize-javascript": "7.0.3",
+    "mocha": {
+      "glob": "^13.0.6"
+    }
   }
 }
