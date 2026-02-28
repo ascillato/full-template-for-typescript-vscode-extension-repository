@@ -2,7 +2,6 @@ import { defineConfig, globalIgnores } from "eslint/config";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import prettier from "eslint-plugin-prettier";
-import spellcheck from "eslint-plugin-spellcheck";
 import globals from "globals";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -17,34 +16,6 @@ const compat = new FlatCompat({
   recommendedConfig: js.configs.recommended,
   allConfig: js.configs.all,
 });
-
-const spellcheckSkipWords = [
-  "compat",
-  "csp",
-  "ecma",
-  "eslint",
-  "globals",
-  "lang",
-  "lifecycles",
-  "mjs",
-  "npm",
-  "prepublish",
-  "readonly",
-  "href",
-  "stderr",
-  "tsx",
-  "tsconfig",
-  "tdd",
-  "typedoc",
-  "workspace",
-  "uri",
-  "utf8",
-  "vitest",
-  "vscode",
-  "vsix",
-  "webview",
-  "webviews",
-];
 
 export default defineConfig([
   globalIgnores([
@@ -74,20 +45,9 @@ export default defineConfig([
       ecmaVersion: "latest",
       sourceType: "module",
     },
-    plugins: { prettier, spellcheck },
+    plugins: { prettier },
     rules: {
       "prettier/prettier": "error",
-      "spellcheck/spell-checker": [
-        "error",
-        {
-          lang: "en_US",
-          identifiers: false,
-          templates: true,
-          skipWords: spellcheckSkipWords,
-          skipIfMatch: ["https?:\\\/\\\/[^\\s]+", "^[A-Za-z0-9]{10,}$"],
-          minLength: 3,
-        },
-      ],
       "no-console": "off",
     },
   },
@@ -106,7 +66,6 @@ export default defineConfig([
     plugins: {
       "@typescript-eslint": typescriptEslint,
       prettier,
-      spellcheck,
     },
     languageOptions: {
       globals: {
@@ -128,17 +87,6 @@ export default defineConfig([
       "@typescript-eslint/consistent-type-imports": "error",
       "no-console": "off",
       "prettier/prettier": "error",
-      "spellcheck/spell-checker": [
-        "warn",
-        {
-          lang: "en_US",
-          identifiers: false,
-          templates: true,
-          skipWords: spellcheckSkipWords,
-          skipIfMatch: ["https?:\\\/\\\/[^\\s]+", "^[A-Za-z0-9]{10,}$"],
-          minLength: 3,
-        },
-      ],
     },
   },
 
