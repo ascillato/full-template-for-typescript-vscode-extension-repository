@@ -135,8 +135,8 @@ jobs:
           files: vscode-extension-template-${{ github.ref_name }}.vsix
 
       # Publish the release to VSCode Market Place
-      - name: Publish extension to VSCode Market Place
-        run: vsce publish -p ${{ secrets.VSCE_TOKEN }}
+      # - name: Publish extension to VSCode Market Place
+      #   run: vsce publish -p ${{ secrets.VSCE_TOKEN }}
 
   # 5. Documentation (build on PRs/pushes/manual; deploy on push-to-main OR manual; never on PRs)
   docs:
