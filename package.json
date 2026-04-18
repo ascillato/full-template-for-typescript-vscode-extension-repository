@@ -3,11 +3,11 @@
   "displayName": "VS Code Extension Template",
   "description": "Starter repository for building VS Code extensions with TypeScript.",
   "icon": "media/icon.png",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "publisher": "template",
   "author": "Extension Template Maintainers",
   "engines": {
-    "vscode": "^1.110.0"
+    "vscode": "^1.116.0"
   },
   "repository": {
     "type": "git",
@@ -87,13 +87,13 @@
     "@eslint/js": "^10.0.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "^25.5.0",
-    "@types/vscode": "^1.115.0",
+    "@types/vscode": "^1.116.0",
     "@typescript-eslint/eslint-plugin": "^8.58.1",
     "@typescript-eslint/parser": "^8.58.0",
     "@vitest/coverage-v8": "^4.1.4",
     "@vscode/test-electron": "^2.4.1",
     "cloc": "^2.6.0-cloc",
-    "cspell": "^9.8.0",
+    "cspell": "^10.0.0",
     "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
