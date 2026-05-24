@@ -103,7 +103,7 @@
     "prettier": "^3.8.3",
     "typedoc": "^0.28.19",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.6"
+    "vitest": "^4.1.7"
   },
   "overrides": {
     "diff": "8.0.3",
