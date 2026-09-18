@@ -7,7 +7,7 @@
   "publisher": "template",
   "author": "Extension Template Maintainers",
   "engines": {
-    "vscode": "^1.120.0"
+    "vscode": "^1.134.0"
   },
   "repository": {
     "type": "git",
@@ -103,7 +103,7 @@
     "prettier": "^3.9.6",
     "typedoc": "^0.28.20",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.11"
+    "vitest": "^5.0.1"
   },
   "overrides": {
     "diff": "8.0.3",
