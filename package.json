@@ -7,7 +7,7 @@
   "publisher": "template",
   "author": "Extension Template Maintainers",
   "engines": {
-    "vscode": "^1.120.0"
+    "vscode": "^1.134.0"
   },
   "repository": {
     "type": "git",
@@ -76,9 +76,9 @@
     "format:check": "prettier --check .",
     "docs:typedoc": "typedoc --options typedoc.json",
     "test": "npm run test:coverage && npm run coverage:report && npm run test:e2e",
-    "test:unit": "vitest run --config vitest.config.ts tests/unit",
-    "test:integration": "vitest run --config vitest.config.ts tests/integration",
-    "test:coverage": "vitest run --config vitest.config.ts --coverage",
+    "test:unit": "vitest run --config vitest.config.mts tests/unit",
+    "test:integration": "vitest run --config vitest.config.mts tests/integration",
+    "test:coverage": "vitest run --config vitest.config.mts --coverage",
     "coverage:report": "python3 docs/source/coverage_report.py || python docs/source/coverage_report.py",
     "test:e2e": "npm run compile && node ./tests/e2e/runTest.js"
   },
@@ -90,8 +90,9 @@
     "@types/vscode": "^1.134.0",
     "@typescript-eslint/eslint-plugin": "^8.70.0",
     "@typescript-eslint/parser": "^8.67.0",
-    "@vitest/coverage-v8": "^4.1.11",
+    "@vitest/coverage-v8": "^5.0.1",
     "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.0.0",
     "cloc": "^2.6.0-cloc",
     "cspell": "^10.2.2",
     "eslint": "^10.10.0",
@@ -103,7 +104,7 @@
     "prettier": "^3.9.6",
     "typedoc": "^0.28.20",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.11"
+    "vitest": "^5.0.1"
   },
   "overrides": {
     "diff": "8.0.3",
@@ -111,5 +112,8 @@
     "mocha": {
       "glob": "^13.0.6"
     }
+  },
+  "allowScripts": {
+    "@vscode/vsce-sign@2.1.0": true
   }
 }
