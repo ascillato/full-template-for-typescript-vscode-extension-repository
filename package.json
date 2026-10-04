@@ -104,7 +104,7 @@
     "prettier": "^3.9.9",
     "typedoc": "^0.28.20",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.3"
   },
   "overrides": {
     "diff": "8.0.3",
