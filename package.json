@@ -3,7 +3,7 @@
   "displayName": "VS Code Extension Template",
   "description": "Starter repository for building VS Code extensions with TypeScript.",
   "icon": "media/icon.png",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "publisher": "template",
   "author": "Extension Template Maintainers",
   "engines": {
@@ -107,6 +107,7 @@
     "vitest": "^5.0.3"
   },
   "overrides": {
+    "@azure/msal-node": "^7.1.1",
     "diff": "8.0.3",
     "serialize-javascript": ">=7.1.3",
     "mocha": {
