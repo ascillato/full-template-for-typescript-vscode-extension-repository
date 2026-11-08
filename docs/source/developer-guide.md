@@ -17,6 +17,23 @@ This extension welcomes contributions from the community. Please review the [CON
    ```
 3. Launch the Extension Development Host with `F5` in VS Code and open the **Extension** view.
 
+### Dependency compatibility
+
+The dependency overrides require `minimatch >=11.0.1` and Mocha's `glob ^14.0.4`
+to address known security advisories. The lockfile selects `minimatch 11.0.5`.
+Run `npm audit` after dependency updates to check the complete development toolchain.
+
+TypeDoc is pinned to `0.28.20` because installation applies a small compatibility
+patch in `scripts/patch-typedoc.cjs`. It replaces TypeDoc's call to a removed
+minimatch method with the supported partial matching API, preserving recursive
+source discovery. If installing with `--ignore-scripts`, run `npm run postinstall`
+before generating documentation. When upgrading TypeDoc, check whether this
+patch is still necessary and update or remove it together with the version pin.
+
+TypeScript remains at `6.0.3`, the newest version supported by both TypeDoc and
+the ESLint parser. VS Code type definitions stay on `~1.134.0` to match
+`engines.vscode` and preserve compatibility with the declared minimum VS Code version.
+
 ## Packaging and installation
 
 - Generate a VSIX (requires `@vscode/vsce`):

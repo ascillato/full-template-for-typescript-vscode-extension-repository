@@ -2,6 +2,7 @@
 src/**
 test/**
 tests/**
+scripts/**
 .vscode/**
 **/*.map
 **/*.ts

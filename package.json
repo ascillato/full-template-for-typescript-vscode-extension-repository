@@ -3,7 +3,7 @@
   "displayName": "VS Code Extension Template",
   "description": "Starter repository for building VS Code extensions with TypeScript.",
   "icon": "media/icon.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "template",
   "author": "Extension Template Maintainers",
   "engines": {
@@ -66,6 +66,7 @@
     ]
   },
   "scripts": {
+    "postinstall": "node ./scripts/patch-typedoc.cjs",
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
@@ -83,18 +84,17 @@
     "test:e2e": "npm run compile && node ./tests/e2e/runTest.js"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.7",
     "@eslint/js": "^10.0.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "^26.6.6",
-    "@types/vscode": "^1.145.0",
-    "@typescript-eslint/eslint-plugin": "^8.72.0",
+    "@types/vscode": "~1.134.0",
+    "@typescript-eslint/eslint-plugin": "^8.72.1",
     "@typescript-eslint/parser": "^8.72.1",
-    "@vitest/coverage-v8": "^5.0.5",
+    "@vitest/coverage-v8": "^5.1.0",
     "@vscode/test-electron": "^3.1.0",
     "@vscode/vsce": "^4.1.0",
     "cloc": "^2.11.0",
-    "cspell": "^10.4.0",
+    "cspell": "^10.4.1",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
@@ -102,16 +102,15 @@
     "globals": "^17.14.0",
     "mocha": "^12.0.3",
     "prettier": "^3.9.10",
-    "typedoc": "^0.28.20",
+    "typedoc": "0.28.20",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.3"
+    "vitest": "^5.1.0"
   },
   "overrides": {
-    "@azure/msal-node": "^7.1.1",
-    "diff": "8.0.3",
+    "minimatch": ">=11.0.1",
     "serialize-javascript": ">=7.1.3",
     "mocha": {
-      "glob": "^13.0.6"
+      "glob": "^14.0.4"
     }
   },
   "allowScripts": {
